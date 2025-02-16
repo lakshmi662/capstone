@@ -1,21 +1,82 @@
-.block {
+/* Header Container */
+.header {
   display: flex;
-  justify-content: center;  /* Centers items in a row */
   align-items: center;
-  gap: 20px;  /* Space between items */
-  background: #333;
-  padding: 15px;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  font-family: Arial, sans-serif;
 }
 
-.block a {
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+/* Navigation Items */
+.nav-item {
+  display: inline-block;
+  margin: 0 15px;
+  font-size: 16px;
+  color: #333;
   text-decoration: none;
-  color: white;
-  font-size: 18px;
-  padding: 10px 15px;
-  transition: 0.3s;
 }
 
-.block a:hover {
-  background: #555;
-  border-radius: 5px;
+.nav-item:hover {
+  color: #000;
+  font-weight: bold;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 150px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Search Bar */
+.icon-search {
+  font-size: 18px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+/* Sign In */
+.icon-signin {
+  font-size: 18px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+/* Cart Icon */
+.icon-cart {
+  font-size: 18px;
+  cursor: pointer;
 }
