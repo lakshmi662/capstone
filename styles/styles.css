@@ -43,12 +43,16 @@
 /* fallback fonts */
 @font-face {
   font-family: "muli", sans-serif;
+  font-weight: 200;                     /* Added font-weight: 200 */
+  font-style: normal;
   size-adjust: 88.82%;
   src: local('Arial');
 }
 
 @font-face {
   font-family: "muli", sans-serif;
+  font-weight: 200;                     /* Added font-weight: 200 */
+  font-style: normal;
   size-adjust: 99.529%;
   src: local('Arial');
 }
@@ -109,7 +113,8 @@ h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
-  font-weight: 600;
+  font-weight: 200;                     /* Added font-weight: 200 */
+  font-style: normal;
   line-height: 1.25;
   scroll-margin: 40px;
 }

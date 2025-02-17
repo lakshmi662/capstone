@@ -53,10 +53,17 @@
   background: none /* Semi-transparent overlay */
 }
 
-.cards .cards-card-body h2, 
+.cards .cards-card-body h2 {
+  font-size: 1.5em; /* Adjust this value as needed */
+  font-weight: bold; /* Optional: Makes the heading stand out */
+  margin: 0;
+  padding: 8px;
+  z-index: 2; /* Ensures text is on top */
+}
+
 .cards .cards-card-body p {
   margin: 0;
   padding: 8px;
-  font-size: 1.2em;
-  z-index: 2; /* Ensures text is on top */
+  font-size: 1.2em; /* Keeping paragraph size the same */
+  z-index: 2;
 }

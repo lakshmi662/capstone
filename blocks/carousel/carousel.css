@@ -60,7 +60,29 @@
     background-color: none;
     position: relative;
     width: var(--slide-content-width, auto);
+    text-align: center; /* Center align the content */
   }
+  
+  
+  .carousel .carousel-slide-content h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: rgb(17, 24, 39);
+    line-height: 1.5;
+
+
+  }
+  
+  .carousel .carousel-slide-content p {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: rgb(17, 24, 39);
+    line-height: 1.5;
+  }
+
+    
+
   
   .carousel .carousel-slide-indicators {
     display: flex;
@@ -147,6 +169,7 @@
   
       margin: 92px;
     }
+    
   
     .carousel .carousel-slide .carousel-slide-content[data-align='justify'] {
       --slide-content-width: auto;
