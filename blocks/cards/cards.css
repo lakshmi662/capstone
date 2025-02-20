@@ -13,15 +13,14 @@
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 24px;
+  grid-gap: 10px;
   width: 100%;
 }
 
 .cards > ul > li {
-  position: relative;  /* Allows text to be positioned over the image */
-  border: 1px solid #dadada;
+  position: relative; 
   background-color: var(--background-color);
-  overflow: hidden;  /* Prevents overflow */
+  overflow: hidden;  
 }
 
 .cards .cards-card-image {
@@ -50,20 +49,22 @@
   text-align: center;
   color: white;
   padding: 32px 16px; 
-  background: none /* Semi-transparent overlay */
+  background: none 
 }
 
 .cards .cards-card-body h2 {
-  font-size: 3.3em;
-  font-weight:400;
+
+  font-size: 3.8em;
   margin: 0;
-  padding: 8px;
-  z-index: 2; /* Ensures text is on top */
+  font-weight:400;
+  padding: 4px;
+  z-index: 2; 
 }
 
 .cards .cards-card-body p {
   margin: 0;
-  padding: 8px;
-  font-size: 1.2em; /* Keeping paragraph size the same */
+  padding: 4px;
+  font-size:0.9em;
+  font-weight: 400;
   z-index: 2;
 }

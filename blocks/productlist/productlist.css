@@ -1,0 +1,91 @@
+.productlist > div > div {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 products per row on desktops */
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Desktop: 900px and above (Default) */
+@media (min-width: 900px) {
+  .productlist > div > div {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Tablet: 600px and above */
+@media (max-width: 899px) {
+  .productlist > div > div {
+    grid-template-columns: repeat(3, 1fr); /* 3 products per row */
+  }
+}
+
+/* Mobile: 360px and above */
+@media (max-width: 599px) {
+  .productlist > div > div {
+    grid-template-columns: repeat(2, 1fr); /* 2 products per row */
+  }
+}
+
+
+
+/* Product Card Styling */
+.product-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product-title {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 10px 0;
+  color: rgb(17, 24, 39);
+  white-space: nowrap;       /* Prevents text from wrapping */
+  overflow: hidden; 
+
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(17, 24, 39)
+}
+
+
+
+.add-to-cart {
+  background:rgb(41,84,255);
+  color: #fff;
+  border: #1E3A8A;
+  padding: 7px 20px;
+  width: 70%;
+  cursor: pointer;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight:bold;
+  transition: background 0.3s;
+  text-align: center;
+  margin-right:15px;
+}
+
+.add-to-cart:hover {
+  background: #172554;
+}
+.wishlist-icon {
+  width: 20px;
+  height: 20px;
+  stroke:black;
+  transition: stroke 0.3s, fill 0.3s;
+  cursor: pointer;
+  position: relative; /* Adjust position */
+  top: 6px;
+}

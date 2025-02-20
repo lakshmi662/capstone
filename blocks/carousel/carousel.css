@@ -59,15 +59,15 @@
     background-color: none;
     position: relative;
     width: var(--slide-content-width, auto);
-    text-align: center; /* Center align the content */
+    text-align: center; 
 }
   
 .carousel .carousel-slide-content h2 {
-    font-size: 3em;
+    font-size: 3.2em;
     font-weight: 400;
     margin-bottom: 8px;
     color: rgb(17, 24, 39);
-    line-height: 1.5;
+    line-height: 1.25;
 }
   
 .carousel .carousel-slide-content p {
@@ -75,21 +75,30 @@
     font-weight: 400;
     color: rgb(17, 24, 39);
     line-height: 1.5;
+    margin-bottom:4px;
+}
+.carousel .carousel-slide-content a {
+    font-size: 1.1em;
+    background-color: transparent;
+    color: rgb(17, 24, 39);
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    margin-top: 0px;
 }
 
-.carousel .carousel-slide-content .shop-now-link {
-  font-size: 1rem; /* Adjust size as needed */
-  font-weight: 500;
-  color: black; /* Black text color */
-  text-decoration: underline; /* Underline effect */
-  display: inline-block;
-  margin-top: 10px; /* Adds spacing from text above */
-  transition: color 0.3s ease-in-out;
+.carousel .carousel-slide-content .shop-now-link{
+    font-size: 1rem; 
+    font-weight: 500;
+    color: black; 
+    text-decoration: underline; 
+    display: inline-block;
+    margin-top: 10px; 
+    transition: color 0.3s ease-in-out;
 }
 
-.carousel .carousel-slide-content .shop-now-link:hover {
-  color: #333; /* Slightly darker on hover */
-  text-decoration: underline; /* Keep underline on hover */
+.carousel .carousel-slide-content .shop-now-link:hover{
+    color: #333; 
 }
   
 .carousel .carousel-slide-indicators {
@@ -97,18 +106,17 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 6px 12px;
-    padding: 12px;
-    background-color: var(--light-color);
+    padding:20px;
     line-height: 0;
 }
   
 .carousel .carousel-slide-indicator button {
-    width: 24px;
-    height: 24px;
+    width: 15px;
+    height: 15px;
     margin: 0;
     padding: 0;
     border-radius: 50%;
-    background-color: #dadada;
+    background-color:rgb(156, 163, 175);
     transition: background-color 0.2s;
 }
   
@@ -130,7 +138,6 @@
     z-index: 1;
 }
   
-/* Navigation Buttons */
 .carousel .carousel-navigation-buttons button {
     position: relative;
     width: 15px;
@@ -146,6 +153,7 @@
 .carousel .carousel-navigation-buttons button:focus-visible {
     background-color: rgba(19 19 19 / 75%);
 }
+
   
 .carousel .carousel-navigation-buttons button::after {
     display: block;

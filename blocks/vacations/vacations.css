@@ -1,0 +1,52 @@
+.vacations > div {
+    display: flex;
+    flex-direction: column;
+}
+ 
+.vacations > div > div:first-child {
+    flex: 3; 
+    order: 0;
+    margin-top: 3rem;
+}
+ 
+.vacations > div > div:last-child {
+    flex: 1;
+    order: 1;
+    background-color: rgb(27, 37, 44);
+    color: white;
+    margin-top: -30px;
+    padding: 4rem 2.5rem 0.5rem 2.5rem; 
+    min-height: 400px;
+    text-align: center;  
+}
+.vacations h2 {
+    margin: 1rem 0 0 0;
+    font-size:3.8em;
+    font-weight: 400; 
+    line-height: 1.2; 
+}
+  .vacations p{
+    margin-bottom: -1rem;
+    font-weight: 400;
+  }
+  .vacations a{
+    text-decoration: underline !important; 
+    font-weight: normal; 
+    background-color: transparent !important;
+  }
+ 
+@media (min-width: 900px) {
+    .vacations > div {
+        flex-direction: row;
+    }
+ 
+    .vacations > div > div:first-child {
+        flex: 2.5; 
+    }
+ 
+    .vacations > div > div:last-child {
+        flex: 1; 
+        min-height: 500px;
+    }
+}
+ 

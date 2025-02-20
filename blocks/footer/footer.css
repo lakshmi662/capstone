@@ -1,20 +1,75 @@
 footer {
-  background-color: var(--light-color);
+  background-color: var(--background-color);
   font-size: var(--body-font-size-xs);
+  padding: 40px 0;
+  border-top: 1px solid#e0e0e0;
+    justify-content: space-between;
 }
 
-footer .footer > div {
-  margin: auto;
+.footer > div {
+  display: grid;
+  grid-template-rows: auto auto; /* Two rows */
+  gap: 16px;
   max-width: 1200px;
-  padding: 40px 24px 24px;
+  margin: auto;
+  padding: 10px;
 }
 
-footer .footer p {
+.footer > div > div:first-child {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.footer > div > div:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 16px;
+}
+
+.footer-section h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .account ul li {
+  margin-bottom: 12px; /* Adds space between each item */
+}
+
+.footer .about-us ul li {
+  margin-bottom: 12px; /* Adds space between each item */
+}
+.footer .help ul li {
+  margin-bottom: 12px; 
+}
+
+
+.footer li{
+  list-style: none;
+  color:rgb(75, 85, 99);
+  font-weight: 400;
+
+}
+
+.footer-section p {
   margin: 0;
+  padding: 10px;
 }
 
-@media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
-  }
+
+/* this is added to remove horizantal bar at the bottom*/
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
+
+
+
+
