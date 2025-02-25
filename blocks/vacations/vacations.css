@@ -4,26 +4,18 @@
 }
  
 .vacations > div > div:first-child {
-    flex: 3; 
     order: 0;
     margin-top: 3rem;
 }
  
 .vacations > div > div:last-child {
-    flex: 1;
     order: 1;
     background-color: rgb(27, 37, 44);
     color: white;
-    margin-top: -30px;
-    padding: 4rem 2.5rem 0.5rem 2.5rem; 
-    min-height: 400px;
     text-align: center;  
 }
 .vacations h2 {
-    margin: 1rem 0 0 0;
-    font-size:3.8em;
     font-weight: 400; 
-    line-height: 1.2; 
 }
   .vacations p{
     margin-bottom: -1rem;
@@ -35,18 +27,74 @@
     background-color: transparent !important;
   }
  
+@media (min-width: 360px) {
+    .vacations > div {
+        text-align: center;
+    }
+
+    .vacations > div > div:last-child {
+        padding: 4.5rem 1.5rem 0.5rem 1.5rem;
+        min-height: 330px;
+        
+    }
+
+    .vacations h2 {
+        font-size: 1.8em;
+    }
+
+    .vacations p {
+        font-size: 0.7em;
+    }
+}
+
+@media (min-width: 600px) {
+    .vacations > div {
+        text-align: center;
+    }
+
+    .vacations > div > div:first-child {
+        flex: 3;
+        margin-top: 2.5rem;
+    }
+
+    .vacations > div > div:last-child {
+        flex: 1;
+        padding: 4rem 2rem 1rem 2rem;
+        min-height: 500px;
+    }
+
+    .vacations h2 {
+        font-size: 2em;
+    }
+
+    .vacations p {
+        font-size: 1em;
+    }
+}
 @media (min-width: 900px) {
     .vacations > div {
         flex-direction: row;
+        align-items: center;
     }
- 
+
     .vacations > div > div:first-child {
-        flex: 2.5; 
+         flex: 7; 
+        position: relative;
     }
- 
+
     .vacations > div > div:last-child {
-        flex: 1; 
-        min-height: 500px;
+        flex: 1;
+        min-height: 400px;
+        padding: 5rem 3rem 1rem 3rem;
+    }
+
+    .vacations h2 {
+        font-size: 3.2em;
+    }
+
+    .vacations p {
+        font-size: 1em;
     }
 }
+
  

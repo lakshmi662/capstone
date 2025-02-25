@@ -1,12 +1,7 @@
 .columns > div {
   display: flex;
-  justify-content: flex-end;
-  padding:80px;
 }
 
-.columns img {
-  width: 70%;
-}
 
 .columns > div > div {
   order: 0;
@@ -16,37 +11,18 @@
   order: 1;
 }
 
-.columns > div > .columns-img-col img {
-  height: 280px;
-  width: auto;
-  margin-left:120px;
-  margin-top: -50px;
-  
-}
 .columns h2{
   font-weight: 400;
-  font-size:3.3em;
-  text-align: center;
-  margin-top:110px;
   padding:12px;
-  margin-bottom:10px;
-  margin-top: 5px;
 
 }
 .columns h3{
   font-weight: 400;
-  font-size:2.7em;
-  text-align: center;
-  white-space: nowrap;
   margin-top: 5px;
 
 }
 .columns p{
   font-weight: 400;
-  font-size:0.83em;
-  text-align: center;
-  margin-top: 5px;
-  margin-bottom:20px;
 
 }
 .columns a{
@@ -55,33 +31,92 @@
   color: rgb(17, 24, 39);
   text-decoration: underline;
   cursor: pointer;
-  transition: color 0.3s ease-in-out;
-  margin-top: 0px;
   
 
 }
 
-@media (width >= 900px) {
+@media (min-width: 360px) {
   .columns > div {
-    align-items: center;
-    flex-direction: unset;
-    gap: 24px;
+    flex-direction: column;
+    padding:15px;
+    text-align: center;
   }
 
-  .columns > div > div {
-    flex: 1;
-    order: unset;
+  .columns h2 {
+    font-size: 1.4em;
+    
+  }
+  .columns h3 {
+    font-size: 1.2em;
+  }
+
+  .columns p {
+    font-size: 0.7em;
   }
 }
-@media (max-width: 768px) { 
-  .columns > div {
-    display: block; 
-  }
+
+@media (min-width: 600px) and (max-width: 899px) {
 
   .columns > div > .columns-img-col img {
-    margin-left: 0; 
-    margin-top: 20px; 
-    height: 250px; 
-    width: 100%; 
+    width: 70%;
+    height: 270px;
+    margin-top: 40px;
   }
+
+  .columns h2, .columns h3, .columns p {
+    text-align:center;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (min-width: 800px) {
+    .columns > div {
+      flex-direction: row; 
+      align-items: center;
+    }
+
+    .columns > div > .columns-img-col {
+      order: 1; 
+    }
+    .columns p {
+      max-width: 90%; 
+      text-align: center; 
+    }
+
+    .columns > div > .columns-img-col img {
+      width: 90%;
+      height: 250px;
+      margin-left: 20px;
+    }
+  }
+}
+@media (min-width: 900px) {
+  .columns > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 80px 0;
+  }
+
+  .columns h2 {
+    font-size: 3.4em;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 auto;
+  }
+
+  .columns h3 {
+    font-size: 2.6em;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+
+  .columns p {
+    font-size: 0.815em;
+    max-width: 85%;
+    margin: 10px auto;
+    line-height: 1.5;
+  }
+
+  
 }

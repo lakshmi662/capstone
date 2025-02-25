@@ -1,37 +1,23 @@
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  justify-content: center;
-  align-items: stretch;
-  width: 100%;
-}
 
 .cards > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 10px;
   width: 100%;
 }
 
 .cards > ul > li {
   position: relative; 
   background-color: var(--background-color);
-  overflow: hidden;  
 }
 
 .cards .cards-card-image {
   position: relative;
-  width: 100%;
-  height: 100%;
+  
 }
 
 .cards > ul > li img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   aspect-ratio: 4 / 3;
 }
@@ -44,27 +30,73 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
   text-align: center;
   color: white;
-  padding: 32px 16px; 
-  background: none 
 }
 
 .cards .cards-card-body h2 {
-
-  font-size: 3.8em;
   margin: 0;
   font-weight:400;
   padding: 4px;
-  z-index: 2; 
 }
 
 .cards .cards-card-body p {
   margin: 0;
-  padding: 4px;
-  font-size:0.9em;
   font-weight: 400;
-  z-index: 2;
 }
+/* Responsive Design: Mobile-First Approach */
+
+/* Mobile: 360px and above (Default styles apply) */
+@media (min-width: 360px) {
+  .cards > ul {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-gap: 16px;
+  }
+  .cards .cards-card-body {
+      padding: 24px 12px;
+  }
+  .cards .cards-card-body h2 {
+      font-size: 1.5em;
+  }
+  .cards .cards-card-body p {
+      font-size: 0.7em;
+
+  }
+}
+
+/* Tablet: 600px and above */
+@media (min-width: 600px) and (max-width: 899px) {
+  .cards > ul {
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  }
+  .cards .cards-card-body {
+      padding: 32px 16px;
+  }
+  .cards .cards-card-body h2 {
+      font-size: 2.8em;
+  }
+  .cards .cards-card-body p {
+      font-size: 0.9em;
+  }
+}
+
+/* Desktop: 900px and above */
+@media (min-width: 900px) {
+
+      .cards > ul {
+          grid-template-columns: repeat(3, minmax(280px, 1fr));
+          grid-gap: 10px;
+      }
+      .cards .cards-card-body {
+          padding: 30px 10px;
+      }
+      .cards .cards-card-body h2 {
+          font-size: 3.4em;
+      }
+      .cards .cards-card-body p {
+          font-size:0.9em;
+      }
+  }
+
+
