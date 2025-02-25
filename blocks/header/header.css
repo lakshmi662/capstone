@@ -1,4 +1,3 @@
-/* header and nav layout */
 
 header .nav-wrapper {
   background-color: var(--background-color);
@@ -58,9 +57,9 @@ header nav p {
 
 header nav a:any-link {
   color: currentcolor;
+  
 }
 
-/* hamburger */
 header nav .nav-hamburger {
   grid-area: hamburger;
   height: 22px;
@@ -313,3 +312,9 @@ header nav .nav-tools {
 header nav .nav-tools > *:last-child {
   margin-right: 0;
 }
+header nav .icon-search,
+header nav .icon-signin,
+header nav .icon-cart {
+  cursor: pointer;
+}
+

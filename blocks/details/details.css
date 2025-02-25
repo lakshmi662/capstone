@@ -55,14 +55,14 @@
     width: 100px;
     height: 124px;
     object-fit: cover;
-    border: 1px solid #E5E7EB;
     border-radius: 4px;
     padding: 5px;
     cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 .image.block > div:last-child img:hover {
-    border-color: #111827;
+    box-shadow: 0px 0px 20px 5px rgba(173, 216, 230, 0.8);
 }
 .details-wrapper {
     width: 35%;

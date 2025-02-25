@@ -45,23 +45,12 @@ function focusNavSection() {
   document.activeElement.addEventListener('keydown', openOnKeydown);
 }
 
-/**
- * Toggles all nav sections
- * @param {Element} sections The container element
- * @param {Boolean} expanded Whether the element should be expanded or collapsed
- */
 function toggleAllNavSections(sections, expanded = false) {
   sections.querySelectorAll('.nav-sections .default-content-wrapper > ul > li').forEach((section) => {
     section.setAttribute('aria-expanded', expanded);
   });
 }
 
-/**
- * Toggles the entire nav
- * @param {Element} nav The container element
- * @param {Element} navSections The nav sections within the container element
- * @param {*} forceExpanded Optional param to force nav expand behavior when not null
- */
 function toggleMenu(nav, navSections, forceExpanded = null) {
   const expanded = forceExpanded !== null ? !forceExpanded : nav.getAttribute('aria-expanded') === 'true';
   const button = nav.querySelector('.nav-hamburger button');
@@ -93,10 +82,6 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
-/**
- * loads and decorates the header, mainly the nav
- * @param {Element} block The header block element
- */
 export default async function decorate(block) {
   const navMeta = getMetadata('nav');
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
@@ -122,29 +107,36 @@ export default async function decorate(block) {
 
   const navSections = nav.querySelector('.nav-sections');
 
-if (navSections) {
-  navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
-    if (navSection.querySelector('ul')) {
-      navSection.classList.add('nav-drop');
+  if (navSections) {
+    navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
+      if (navSection.querySelector('ul')) {
+        navSection.classList.add('nav-drop');
 
-      navSection.addEventListener('mouseenter', () => {
-        if (isDesktop.matches) {
-          navSections.querySelectorAll('.nav-drop').forEach((item) => {
-            item.setAttribute('aria-expanded', 'false');
-          });
+        navSection.addEventListener('mouseenter', () => {
+          if (isDesktop.matches) {
+            navSections.querySelectorAll('.nav-drop').forEach((item) => {
+              item.setAttribute('aria-expanded', 'false');
+            });
 
-          navSection.setAttribute('aria-expanded', 'true');
-        }
-      });
+            navSection.setAttribute('aria-expanded', 'true');
+          }
+        });
 
-      navSection.addEventListener('mouseleave', () => {
-        if (isDesktop.matches) {
-          navSection.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
-  });
-}
+        navSection.addEventListener('mouseleave', () => {
+          if (isDesktop.matches) {
+            navSection.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+    });
+  }
+
+  const searchElement = nav.querySelector('.icon-search');
+  if (searchElement) {
+    searchElement.addEventListener('click', () => {
+      window.location.href = 'https://www.google.com';
+    });
+  }
 
   const hamburger = document.createElement('div');
   hamburger.classList.add('nav-hamburger');
