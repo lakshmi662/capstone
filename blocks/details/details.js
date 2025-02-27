@@ -66,11 +66,11 @@ export default function decorate(block) {
         });
     });
 
-    const addToCartBtn = document.querySelector(".add-to-cart button");
+    const addToCartBtn = block.querySelector(".add-to-cart button");
 
     addToCartBtn?.addEventListener("click", function () {
-        const selectedColor = document.querySelector(".coloroptions p.selected");
-        const selectedSize = document.querySelector(".sizeoptions p.selected");
+        const selectedColor = block.querySelector(".coloroptions p.selected");
+        const selectedSize = block.querySelector(".sizeoptions p.selected");
 
         if (!selectedColor || !selectedSize) {
             alert("Please select a color and size before adding to cart.");

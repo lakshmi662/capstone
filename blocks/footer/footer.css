@@ -225,14 +225,11 @@
     justify-content: center;
   }
 }
-  
-  
-
 
 @media screen and (min-width: 360px) and (max-width: 600px) {
   .footer-content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 sections per row */
+    grid-template-columns: repeat(2, 1fr);
   }
   .footer-section:nth-child(3),
   .footer-section:nth-child(4) {

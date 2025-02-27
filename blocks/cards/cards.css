@@ -45,9 +45,7 @@
   margin: 0;
   font-weight: 400;
 }
-/* Responsive Design: Mobile-First Approach */
 
-/* Mobile: 360px and above (Default styles apply) */
 @media (min-width: 360px) {
   .cards > ul {
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -65,7 +63,6 @@
   }
 }
 
-/* Tablet: 600px and above */
 @media (min-width: 600px) and (max-width: 899px) {
   .cards > ul {
       grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
@@ -81,7 +78,6 @@
   }
 }
 
-/* Desktop: 900px and above */
 @media (min-width: 900px) {
 
       .cards > ul {
