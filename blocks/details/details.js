@@ -12,7 +12,7 @@ export default function decorate(block) {
     block.querySelector('.quantityWrapper').children[1].classList.add('quantityselector');
     block.querySelector('.quantityselector').innerHTML = `
         <button class="decrease">-</button>
-        <span>0</span>
+        <span>1</span>
         <button class="increase">+</button>
     `;
 

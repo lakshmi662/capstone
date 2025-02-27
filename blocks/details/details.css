@@ -1,4 +1,4 @@
-.section.image-container.details-container.info-container {
+.image-container{
     display: flex;
     flex-wrap: wrap; 
     gap: 20px; 
