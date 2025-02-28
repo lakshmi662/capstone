@@ -6,6 +6,12 @@
     font-family:"muli", sans-serif;
 }
 .breadcrumb {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.breadcrumb {
     color:black;
     font-weight:400;
     font-size: 15px;
@@ -28,7 +34,6 @@
 }
 
 .details.block div:first-child{
-
     gap:10px;
     justify-content: space-between;
     align-items: center;
