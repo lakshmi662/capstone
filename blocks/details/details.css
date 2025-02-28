@@ -7,17 +7,6 @@
 }
 
 
-.breadcrumb {
-    color:black;
-    font-weight:400;
-    font-size: 15px;
-}
-
-.breadcrumb a {
-    color: black;
-    text-decoration: underline; 
-}
-
 .details-wrapper {
     width: 50%!important;
     flex:1;
