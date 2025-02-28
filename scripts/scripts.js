@@ -11,8 +11,7 @@ import {
   loadSection,
   loadSections,
   loadCSS,
-  getMetadata,
-  loadBlock
+  getMetadata
 } from './aem.js';
 
 function constructBreadcrumb(main) {
