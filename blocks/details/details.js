@@ -16,8 +16,6 @@ export default function decorate(block) {
         <button class="increase">+</button>
     `;
 
-    console.log(block.children[1]);
-
     const mainImage = document.querySelector(".image-wrapper img");
     const thumbnails = document.querySelectorAll(".thumbnail-container img");
 
@@ -79,6 +77,4 @@ export default function decorate(block) {
 
         alert(`Added ${quantity} item(s) in ${selectedColor.textContent} color and ${selectedSize.textContent} size to cart!`);
     });
-
-    console.log(block);
 }

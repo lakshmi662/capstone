@@ -15,7 +15,6 @@ import {
 } from './aem.js';
 
 function constructBreadcrumb(main) {
-  console.log(main);
   const shouldDisplayBreadcrumb = getMetadata('breadcrumb')?.toLowerCase() === 'true';
   
   if (shouldDisplayBreadcrumb && !document.querySelector('.breadcrumb')) {
@@ -26,8 +25,7 @@ function constructBreadcrumb(main) {
       wrapper.appendChild(breadcrumb);
       document.querySelector('main').prepend(wrapper);
       decorateBlocks(breadcrumb);
-      console.log("breadcrumb",breadcrumb);
-      loadBlock(breadcrumb);
+      // loadBlock(breadcrumb);
     }
   }
 }
