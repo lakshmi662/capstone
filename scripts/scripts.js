@@ -25,7 +25,7 @@ function constructBreadcrumb(main) {
       wrapper.appendChild(breadcrumb);
       document.querySelector('main').prepend(wrapper);
       decorateBlocks(breadcrumb);
-      // loadBlock(breadcrumb);
+      loadBlock(breadcrumb);
     }
   }
 }
