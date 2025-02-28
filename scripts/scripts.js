@@ -24,7 +24,7 @@ function constructBreadcrumb() {
       wrapper.className = 'breadcrumb-wrapper';
       wrapper.appendChild(breadcrumb);
       document.querySelector('main').prepend(wrapper);
-      decorateBlock(breadcrumb);
+      decorateBlocks(breadcrumb);
       loadBlock(breadcrumb);
     }
   }
