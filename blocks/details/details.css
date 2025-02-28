@@ -17,7 +17,7 @@
 }
 
 .details-wrapper {
-    width: 50%;
+    width: 50%!important;
     flex:1;
     padding-top: 40px;
 }

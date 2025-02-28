@@ -1,5 +1,5 @@
 .image-wrapper {
-    min-width: 50%;
+    min-width: 50%!important;
     flex:1;
 }
 
