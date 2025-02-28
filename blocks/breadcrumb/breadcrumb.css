@@ -1,11 +1,15 @@
-
 .breadcrumb {
-    color:black;
-    font-weight:400;
+    color: black;
+    font-weight: 400;
     font-size: 15px;
 }
 
 .breadcrumb a {
     color: black;
-    text-decoration: underline; 
+    text-decoration: underline;
+}
+
+.breadcrumb-item {
+    display: inline-block;
+    padding: 0 5px;
 }
