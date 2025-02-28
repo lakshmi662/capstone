@@ -1,10 +1,11 @@
 .info-wrapper {
-    width: 100%;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #E5E7EB;
-    color: rgb(17, 24, 39);
+    width: 100% !important;
+    margin-top: 40px !important;
+    padding-top: 20px !important;
+    border-top: 1px solid #E5E7EB !important;
+    color: rgb(17, 24, 39) !important;
 }
+
 
 .info.block > div {
     display: flex;

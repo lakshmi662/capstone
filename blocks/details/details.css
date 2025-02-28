@@ -5,11 +5,7 @@
     align-items: flex-start;
     font-family:"muli", sans-serif;
 }
-.breadcrumb {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
+
 
 .breadcrumb {
     color:black;
