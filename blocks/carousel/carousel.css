@@ -24,7 +24,6 @@
 } 
 .carousel .carousel-slide {
     flex: 0 0 100%;
-    height: 100vh;
     scroll-snap-align: start;
     flex-direction: column;
     align-items: flex-start;
