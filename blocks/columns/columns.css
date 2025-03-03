@@ -2,7 +2,6 @@
   display: flex;
 }
 
-
 .columns > div > div {
   order: 0;
 }
