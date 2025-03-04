@@ -1,33 +1,29 @@
 export default function decorate(block) {
     async function fetchAndDisplayProducts() {
         try {
-            if (!window.cachedJsonUrl) {
-                const jsonLink = document.querySelector("a[href$='.json']");
-                if (!jsonLink) return;
-                window.cachedJsonUrl = jsonLink.href;
-            }
+            const jsonLink = document.querySelector("a[href$='.json']");
+            if (!jsonLink) return;
             
-            const response = await fetch(window.cachedJsonUrl);
+            const response = await fetch(jsonLink.href);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            
             const data = await response.json();
+
             const productContainer = block.querySelector(".productlist > div > div");
             if (!productContainer) return;
-            
             productContainer.innerHTML = "";
-            
+
             const getProductsPerSlide = () => (window.innerWidth >= 900 ? 5 : window.innerWidth >= 600 ? 3 : 2);
             const productsPerSlide = getProductsPerSlide();
             const totalSlides = Math.ceil(data.data.length / productsPerSlide);
-            
+
             for (let i = 0; i < totalSlides; i++) {
                 const slide = document.createElement("div");
                 slide.classList.add("product-slide");
-                
+
                 data.data.slice(i * productsPerSlide, (i + 1) * productsPerSlide).forEach(product => {
                     const productCard = document.createElement("div");
                     productCard.classList.add("product-card");
-                    
+
                     productCard.innerHTML = `
                     <a href="${product.path}" class="product-link">
                         <img src="${product.productimage}" alt="${product.productname}" class="product-image">
@@ -53,20 +49,20 @@ export default function decorate(block) {
         const container = block.querySelector(".productlist > div > div");
         const slides = block.querySelectorAll(".product-slide");
         let currentIndex = 0;
-        
+
         const wrapper = document.createElement("div");
         wrapper.classList.add("carousel-wrapper");
         container.parentNode.insertBefore(wrapper, container);
         wrapper.appendChild(container);
-        
+
         const dotsContainer = document.createElement("div");
         dotsContainer.classList.add("dots-container");
-        
+
         for (let i = 0; i < (window.innerWidth >= 900 ? 2 : 5); i++) {
             const dot = document.createElement("span");
             dot.classList.add("dot");
             if (i === 0) dot.classList.add("active");
-            
+
             dot.addEventListener("click", () => {
                 currentIndex = i;
                 updateSlide();
@@ -74,7 +70,7 @@ export default function decorate(block) {
             dotsContainer.appendChild(dot);
         }
         wrapper.appendChild(dotsContainer);
-        
+
         function updateSlide() {
             slides.forEach((slide, index) => {
                 slide.style.display = index === currentIndex ? "flex" : "none";
@@ -83,7 +79,7 @@ export default function decorate(block) {
                 dot.classList.toggle("active", index === currentIndex);
             });
         }
-        
+
         container.style.display = "flex";
         container.style.overflow = "hidden";
         container.style.width = "100%";
@@ -94,7 +90,7 @@ export default function decorate(block) {
         });
         updateSlide();
     }
-    
+
     fetchAndDisplayProducts();
     window.addEventListener("resize", fetchAndDisplayProducts);
 }
